@@ -120,3 +120,56 @@ li{
   border-radius: 12px;
   box-shadow: 0 8px 24px 0 rgb(0 0 0 / 12%);
 }
+.login{
+  width: 200px;
+  height: 72px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.nhead .nav1 ul{
+  float:left;
+}
+.nhead .nav1 ul li{
+  float: left;
+  position: relative;
+}
+.nhead .searchbox{
+  float: right;
+  display: flex;
+  position: relative;
+  width: 315px ;
+  height: 40px;
+  padding:0;
+  margin:16px 25px 16px 0;
+  border-radius: 18px;
+  background-color: rgb(248, 248, 248);
+}
+.nhead .searchbox input{
+  float: left ;
+  /* position: absolute; */
+  text-indent: 2em;
+  left: 28px;
+  width: 272px;
+  height: 40px;
+  font-size: 14px;
+  border:0;
+  background-color:transparent;
+  outline: none;
+}
+.nhead .searchbox .split{
+  float: left;
+  width: 1px;
+  height: 20px;
+  margin-right: 12px;
+  margin-top: 10px;
+  background-color: #e5e5e5;
+}
+.nhead .searchbox .searchlogo{
+  width: 16px;
+  height: 16px;
+  float: left;  
+  margin-top: 12px;
+  background-size: contain;
+  background-image: url(https://5sstatic.kugou.com/public/v5.0/images/nav/search.png);
+}
