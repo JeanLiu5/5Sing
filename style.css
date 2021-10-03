@@ -157,6 +157,9 @@ li{
   background-color:transparent;
   outline: none;
 }
+.nhead .searchbox input::-webkit-input-placeholder{
+  color:rgb(193,193,193);
+}
 .nhead .searchbox .split{
   float: left;
   width: 1px;
@@ -172,4 +175,12 @@ li{
   margin-top: 12px;
   background-size: contain;
   background-image: url(https://5sstatic.kugou.com/public/v5.0/images/nav/search.png);
+}
+.main{
+  width: 1401px;
+  height: 485px;
+  margin: 0 auto;
+  padding:0;
+  background-color:blue;
+  box-sizing: border-box;
 }
