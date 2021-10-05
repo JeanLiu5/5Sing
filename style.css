@@ -42,6 +42,7 @@ a{
 img{
   width: 100%;
   height: 100% ;
+  vertical-align: middle;
 }
 .clearfix:after {
   content: ".";
@@ -248,7 +249,7 @@ li{
 }
 .recommend{
   width: 1120px;
-  height: 2400px;
+  height: 800px;
   margin:0 auto;
   
 }
@@ -290,13 +291,14 @@ li{
   width: 1120px;
   height: 662px;
   margin-top: 44px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .recsong{
+  float: left;
   /* display:flex; */
   width: 520px;
   height: 662px;
-  background-color: teal;
+  /* background-color: teal; */
 }
 .recsong_left{
   margin-right: 80px;
@@ -412,10 +414,316 @@ li{
   background-color: blue;
 }
 .big_rec {
-  /* display: flex; */
+  display: flex;
   height: 128px;
   padding-top: 16px;
   margin-bottom: 12px;
   border-radius: 2px;
   background-color: #f8f8f8;
+}
+.coverbox{
+  width: 96px;
+  height: 96px;
+  background-color: rgb(168, 68, 68);
+}
+.cover-box {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  margin: 0 16px 0 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.coverbox img {
+  width: 100%;
+  height: 100%;
+  transition:0.75s cubic-bezier(0, 1, 0.75, 1)
+}
+.coverbox img:hover{
+  width: 105%;
+  height: 105%;
+  position: absolute;    
+  top: 0;    
+  right: -2px;    
+  bottom: 0;    
+  left: -2px;    
+  margin: auto; 
+}
+.covermask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0,0.3);
+  /* opacity: 0;
+  transition: opacity .5s; */
+  display: none;
+}
+.coverbox img:hover .covermask{
+  display: block;
+}
+.recdetail{
+  width: 388px;
+  height: 112px;
+}
+.song_name{
+  display: flex;
+  align-items: center;
+  width: 344px;
+  font-size: 16px;
+}
+.song_tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 18px;
+  padding: 0 6px;
+  margin-left: 6px;
+  color: #7764DA;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  
+}
+/* .recommend .recsong_box .recsong .big_rec .recdetail  */
+.song_name a:hover{
+  color:rgb(0,176,185);
+}
+.recdetail h2{
+
+  font-weight: 400;
+}
+.recdetail .author{
+  display: block;
+  margin-top: 5px;
+  color:rgb(146,146,146);
+  font-size: 12px;
+}
+.recdetail .author:hover{
+  color:rgb(117,117,117);
+}
+.lyrics{
+  margin-top: 5px;
+  width: 348px;
+  height: 40px;
+  color:rgb(146,146,146);
+}
+.small_rec{
+  display:flex;
+  width: 520px;
+  height: 52px;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+.small_rec a{
+  line-height: 52px;
+  /* float:left; */
+  font-size: 14px;
+  margin-left: 20px;
+}
+.small_rec a:hover{
+ color: rgb(0,176,168);
+}
+.small_rec .btn-play {
+  display: none;
+  /* float: left; */
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+  background-size: contain;
+  background-position: center center;
+  background-image: url(https://5sstatic.kugou.com/public/v5.1/images/play.png);
+}
+.small_rec:hover .btn-play{
+  display: block;
+}
+.small_rec .author{
+  margin-left: auto;
+  margin-right: 40px;
+  color: #929292;
+  font-size: 12px;
+  text-align: right;
+}
+.small_rec .author:hover{
+  color:rgb(95,95,95);
+}
+.small_rec:nth-child(2n){
+  background-color: rgb(248, 248, 248);
+}
+.newsong_back{
+  position: relative;
+  height: 516px;
+  background-size: contain;
+  background-position: center center;
+  background-image: url(https://5sstatic.kugou.com/public/v5.1/images/newsong-bg.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+.newsong_back .ct{
+  position: relative;
+  width: 1120px;
+  height: 400px;
+  margin:auto;
+  overflow: hidden;
+  /* background-color: rgb(72,189,254); */
+  padding-top: 44px;
+}
+.newsong_back .ct .top{
+  display: flex;
+  align-items: center;
+  margin-top:0;
+  margin-bottom: 30px;
+}
+.newsong_back .ct .top .title{
+  width: 144px;
+  height: 40px;
+  margin-right: 30px;
+  background-size: contain;
+  background-position: center center;
+  background-image: url(https://5sstatic.kugou.com/public/v5.1/images/title-newsong.png);
+}
+.play_ALL p{
+  color:white;
+}
+.play_ALL:hover p{
+  color:#00B0A8;
+  text-decoration: none;
+}
+.newsong_back .ct .song{
+  float: left;
+  display: flex;
+  align-items: center;
+  width: 520px;
+  margin-right: 80px;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 14px;
+}
+.newsong_back .ct .song:nth-child(2n+1){
+  margin-right: 0;
+}
+.newsong_back .ct .song .cover-box {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  margin-right: 20px;
+  margin-left: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.newsong_back .ct .song .cover-box .cover{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.75s cubic-bezier(0, 1, 0.75, 1);
+}
+.newsong_back .ct .song .cover-box .mask {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgb(0,0,0,.3);
+}
+.newsong_back .ct .song .cover-box .play-icon {
+  display: none;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-position: center center;
+  background-image: url(https://5sstatic.kugou.com/public/v5.1/images/play.png);
+}
+.newsong_back .ct .song .cover-box:hover .play-icon{
+  display: block;
+}
+.newsong_back .ct .song .cover-box:hover .mask{
+  display: block;
+}
+.newsong_back .ct .song .cover-box:hover .cover{
+  position:absolute;
+  width: 105%;
+  height: 105%;
+  transform: scale(110%);
+}
+.newsong_back .ct .song a{
+  color:#fff;
+  font-size: 14px;
+}
+.newsong_back .ct .song a:hover{
+  color:#00926d;
+}
+.newsong_back .ct .song .author{
+  width: 112px;
+  margin-left: auto;
+  color:#fff;
+  opacity: .7;
+}
+.newsong_back .ct .song .author:hover{
+  color:#fff;
+  opacity: 1;
+}
+.newsong_back .bottom{
+  display: flex;
+  width: 240px;
+  height: 6px;
+  /* background-color: #fff; */
+  margin:50px auto;
+}
+.newsong_back .bottom .pagebt{
+  width: 6px;
+  height: 6px;
+  margin-right: 18px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.newsong_back .bottom .cur{
+  background-color: #fff;
+  transform: scale(1.33);
+}
+.newsong_back .bottom .pagebt:hover{
+  background-color: #fff;
+  transform: scale(1.33);
+}
+.newsong_back .arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 76px;
+  top: 50%;
+  border-radius: 0px 2px 2px 0px;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-50%);
+  transition: all .3s;
+  cursor: pointer;
+}
+.newsong_back .prev {
+  left: -60px;
+}
+.newsong_back:hover .prev{
+  left:0;
+}
+.newsong_back .next {
+  right:-60px;
+}
+.newsong_back:hover .next{
+ right: 0;
+}
+.newsong_back .arrow.prev::after {
+  background-size: contain;
+  background-position: center center;
+  background-image: url(https://5sstatic.kugou.com/public/v5.1/images/arrow-left.png);
 }
